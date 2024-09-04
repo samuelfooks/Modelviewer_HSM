@@ -1,0 +1,9 @@
+.DS_Store
+.next/
+node_modules/
+.env*.local
+*/.ipynb_checkpoints/
+model/dst/
+model/node_modules/
+*.zarr
+.zarr
