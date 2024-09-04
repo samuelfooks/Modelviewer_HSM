@@ -60,17 +60,19 @@ Each environmental variable has 5 settings (sliders) that can be adjusted to use
 The fifth slider serves to adjust the importance of this variable in the simulation.
 
 #### Habitat suitability
-The final habitat suitability is calculated as follows: 
 
-Let \( i \) represent each environmental variable in the habitat suitability model. The habitat suitability formula is then given by:
+Index \( i \) represent each environmental variable in the habitat suitability model. The habitat suitability formula is then given by:
+
 
 $$
-\text{Habitat suitability} = \frac{\sum_{i=1}^{n} (W_i \cdot S_i)}{\sum_{i=1}^{n} W_i}
+\text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
 $$
 
-Where:
-- \( W_i \) is the weight for environmental variable \( i \).
-- \( S_i \) is the suitability score for environmental variable \( i \).
+\text{where:}
+\begin{align*}
+W_i & \text{ is the weight for environmental variable } i, \\
+S_i & \text{ is the suitability score for environmental variable } i.
+\end{align*}
 
 
 #### Presets
