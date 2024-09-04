@@ -1,7 +1,3 @@
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 # Edito Resampling datasets
 
 ## About
@@ -66,9 +62,15 @@ The fifth slider serves to adjust the importance of this variable in the simulat
 #### Habitat suitability
 The final habitat suitability is calculated as follows: 
 
+Let \( i \) represent each environmental variable in the habitat suitability model. The habitat suitability formula is then given by:
+
 $$
-\text{Habitat suitability} = \sum_{i=1}^{n} (W_i \cdot S_i)
+\text{Habitat suitability} = \frac{\sum_{i=1}^{n} (W_i \cdot S_i)}{\sum_{i=1}^{n} W_i}
 $$
+
+Where:
+- \( W_i \) is the weight for environmental variable \( i \).
+- \( S_i \) is the suitability score for environmental variable \( i \).
 
 
 #### Presets
