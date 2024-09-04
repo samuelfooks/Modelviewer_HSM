@@ -66,14 +66,14 @@ Index \( i \) represent each environmental variable in the habitat suitability m
 
 $$
 \text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
-$$
+
 
 \text{where:}
 \begin{align*}
 W_i & \text{ is the weight for environmental variable } i, \\
 S_i & \text{ is the suitability score for environmental variable } i.
 \end{align*}
-
+$$
 
 #### Presets
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
