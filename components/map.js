@@ -13,20 +13,22 @@ import { NAN, LABEL_MAP, COLORMAPS_MAP } from '../constants'
 import { frag, LAYER_UNITS } from '../model'
 
 const VARIABLES = [
-  'SALINITY_SSP119_2050', 'SALINITY_SSP119_2090', 
-  'SALINITY_SSP126_2050', 'SALINITY_SSP126_2090', 
-  'SALINITY_SSP245_2050', 'SALINITY_SSP245_2090', 
-  'SALINITY_SSP460_2050', 'SALINITY_SSP460_2090', 
-  'SALINITY_SSP585_2050', 'SALINITY_SSP585_2090', 
+  'SALINITY_SSP119_2050', 
+  'SALINITY_SSP119_2090',  
+  'SALINITY_SSP245_2050', 
+  'SALINITY_SSP245_2090',  
+  'SALINITY_SSP585_2050', 
+  'SALINITY_SSP585_2090', 
   'SALINITY_baseline_2010', 
-  'SST_SSP119_2050', 'SST_SSP119_2090', 
-  'SST_SSP126_2050', 'SST_SSP126_2090', 
-  'SST_SSP245_2050', 'SST_SSP245_2090', 
-  'SST_SSP460_2050', 'SST_SSP460_2090', 
-  'SST_SSP585_2050', 'SST_SSP585_2090', 
+  'SST_SSP119_2050', 
+  'SST_SSP119_2090', 
+  'SST_SSP245_2050', 
+  'SST_SSP245_2090',  
+  'SST_SSP585_2050', 
+  'SST_SSP585_2090', 
   'SST_baseline_2010', 
   'area', 
-   'elevation']
+  'elevation']
 
 const Viewer = ({ expanded, children }) => {
   const { theme } = useThemeUI()
@@ -118,7 +120,8 @@ const Viewer = ({ expanded, children }) => {
           selector={{ variable: VARIABLES }}
           fillValue={NAN}
           source={
-            'https://minio.lab.dive.edito.eu/oidc-willemboone/prototype_reduced.zarr'
+            //'https://minio.lab.dive.edito.eu/oidc-willemboone/prototype_reduced.zarr'
+            'https://minio.lab.dive.edito.eu/oidc-willemboone/EDITO_DUC/EDITO_DUC_pyramid.zarr'
           }
           frag={frag}
         />

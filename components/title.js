@@ -60,7 +60,28 @@ const Title = ({ expanded, setExpanded }) => {
               }`,
             }}
           >
-            Demonstrator of Edito-infra project. Read the paper and the explaining article. 
+            Demonstrator of Edito-infra project. Read the{' '}
+            <Link
+              href='https://github.com/willem0boone/Edito_model_viewer'
+              sx={{ pointerEvents: expanded ? 'none' : 'all' }}
+            >
+            paper
+            </Link>{' '}
+            and the{' '} 
+
+            <Link
+              href='https://github.com/willem0boone/Edito_model_viewer'
+              sx={{ pointerEvents: expanded ? 'none' : 'all' }}
+            >
+            explaining article.
+  
+            </Link>
+            This application makes use of technology developed by {' '}
+            <Link
+              href=' https://github.com/carbonplan/seaweed-farming-web'
+            >
+            Carbonplan.
+            </Link>   
           </Box>
         </Column>
       </Row>
