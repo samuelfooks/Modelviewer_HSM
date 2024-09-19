@@ -8,14 +8,14 @@ Author: Willem Boone | contact: [willem.boone@vliz.be](willem.boone@vliz.be)
 
 ## Goal
 #### Summary of Demonstrator
-The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is maintained in a separate [repository](https://github.com/willem0boone/Edito_model_viewer) and is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub](https://github.com/carbonplan/seaweed-farming-web).
+The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub](https://github.com/carbonplan/seaweed-farming-web).
 
 In this demonstrator, habitat suitability is calculated using a deterministic model that uses minimum and maximum thresholds on the environmental variables.
  The environmental parameters that are used are: 
 
-- Sea surface temperature (°C)
-- Sea surface salinity ()
-- Bathymetry (depth in m) 
+- Sea surface temperature
+- Sea surface salinity
+- Bathymetry
 
 The thresholds for all variables can be adopted using slider widgets. On any changing parameter, the suitability map is updated and rendered in the viewer. Using a time slider, environmental parameters for several future climate scenarios can be accessed and converted in suitability maps.
 This work is available on this [GitHub page](https://github.com/willem0boone/Edito_model_viewer). 
@@ -41,7 +41,7 @@ To start a development version of the site, simply run:
 npm run dev
 ```
 
-and then visit `http://localhost:5002/research/seaweed-farming` in your browser.
+and then visit `http://localhost:5002/model_viewer/habitat_suitability` in your browser.
 
 ## Simulating Habitat Suitability
 
@@ -64,19 +64,23 @@ The fifth slider serves to adjust the importance of this variable in the simulat
 Index \( i \) represent each environmental variable in the habitat suitability model. The habitat suitability formula is then given by:
 
 
-$$
+```math
 \text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
+\\
 
+\text{with:}
 
-\text{where:}
 \begin{align*}
-W_i & \text{ is the weight for environmental variable } i, \\
-S_i & \text{ is the suitability score for environmental variable } i.
+W_i & \text{ is the weight for environmental variable } i,\\
+S_i & \text{ is the suitability score for environmental variable } i,\\
+n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 \end{align*}
-$$
+```
+
 
 #### Presets
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
+
 
 <<some reference to Rutendo/Ward: source of presets>>
 
