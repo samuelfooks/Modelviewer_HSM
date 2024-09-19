@@ -12,10 +12,16 @@ const logo = {
 const About = ({ sx }) => {
   return (
     <>
-      <Box sx={sx.heading}>About</Box>
+      <Box sx={sx.heading}>Credits</Box>
       <Group spacing={2}>
         <Box sx={sx.description}>
-        This interactive tool is a demonstrator use case of the Edito-infra project ...
+       
+        The application makes use of technology developed by {' '}
+        <Link
+          href=' https://github.com/carbonplan/seaweed-farming-web'
+        >
+        Carbonplan.
+        </Link>        
         </Box>
       </Group>
 

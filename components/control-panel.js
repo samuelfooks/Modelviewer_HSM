@@ -120,14 +120,7 @@ const ControlPanel = ({ expanded, setExpanded, children, embedded }) => {
         side='left'
         width={3}
         onClose={() => setShowRegionPicker(false)}
-        footer={
-          <SidebarFooter
-            onClick={() => setShowRegionPicker((v) => !v)}
-            id='footer'
-          >
-            <Statistics sx={sx} />
-          </SidebarFooter>
-        }
+
       >
         {children}
       </Sidebar>

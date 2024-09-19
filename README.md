@@ -45,7 +45,7 @@ and then visit `http://localhost:5002/model_viewer/habitat_suitability` in your 
 
 ## Simulating Habitat Suitability
 
-#### Environmental living conditions
+### Environmental living conditions
 Each environmental variable has 5 settings (sliders) that can be adjusted to user requirements / species characteristics. Four of them are related to the living preferences and limitations of the species and are described in this table:  
 
 
@@ -59,10 +59,10 @@ Each environmental variable has 5 settings (sliders) that can be adjusted to use
 
 The fifth slider serves to adjust the importance of this variable in the simulation.
 
-#### Habitat suitability
+### Habitat suitability
 
-Index \( i \) represent each environmental variable in the habitat suitability model. The habitat suitability formula is then given by:
-
+<!-- 
+Index \( i \) represent each environmental variable in the habitat suitability model.
 
 ```math
 \text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
@@ -76,16 +76,32 @@ S_i & \text{ is the suitability score for environmental variable } i,\\
 n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 \end{align*}
 ```
+ -->
+ 
+ Habitat suitability is calculated as the weighted average of suitability per environmental variables. Each environmental variable has:
+- The **weight** (W) representing its importance.
+- A **suitability score** (S) indicating how suitable that variable is.
 
+#### Formula
+Habitat suitability is the total sum of the products of weights and suitability scores for all environmental variables, divided by the total sum of the weights.
+- Multiply each environmental variable's weight by its corresponding suitability score.
+- Add these values together to get the **numerator**.
+- Then, sum up all the weights to get the **denominator**.
+- Finally, divide the numerator by the denominator to calculate the habitat suitability.
 
-#### Presets
+#### Variables
+- **W** = Weight of each environmental variable (how important it is).
+- **S** = Suitability score of each environmental variable (how suitable it is).
+- **n** = The number of environmental variables considered.
+
+### Presets
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
 <<some reference to Rutendo/Ward: source of presets>>
 
 
-#### Simulating the future
+### Simulating the future
 For future predictions, 3 Shared Socioeconomic Pathways can be selected. Using the time slider, the situation in 2010, 2050 and 2090 can be simulated. In these future simulations, sea surface salinity & sea surface temperature are subject to change, while bathymetry is considered static.
 
  
