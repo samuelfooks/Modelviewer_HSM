@@ -13,7 +13,7 @@ const Header = ({ expanded, setExpanded, embedded }) => {
   return (
     <>
       <Head>
-        <title>Super Awesome WebApp</title>
+        <title>Model viewer</title>
       </Head>
 
       <Container>

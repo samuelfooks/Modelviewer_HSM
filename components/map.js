@@ -73,10 +73,10 @@ const Viewer = ({ expanded, children }) => {
       </SidebarAttachment>
 
       <Map
-        zoom={2}
+        zoom={4}
         minZoom={2}
         maxZoom={8}
-        center={[-45, 30]}
+        center={[15, 55]}
         debug={false}
         style={{ overflow: 'inherit' }}
       >
@@ -104,7 +104,7 @@ const Viewer = ({ expanded, children }) => {
           />
         )}
         <Raster
-          maxZoom={5}
+          maxZoom={6}
           colormap={colormap}
           clim={clim}
           display={true}
