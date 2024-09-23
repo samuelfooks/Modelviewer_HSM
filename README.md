@@ -8,7 +8,7 @@ Author: Willem Boone | contact: [willem.boone@vliz.be](willem.boone@vliz.be)
 
 ## Goal
 #### Summary of Demonstrator
-The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub](https://github.com/carbonplan/seaweed-farming-web).
+The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub - seaweed-farming-web](https://github.com/carbonplan/seaweed-farming-web).
 
 In this demonstrator, habitat suitability is calculated using a deterministic model that uses minimum and maximum thresholds on the environmental variables.
  The environmental parameters that are used are: 
@@ -18,14 +18,14 @@ In this demonstrator, habitat suitability is calculated using a deterministic mo
 - Bathymetry
 
 The thresholds for all variables can be adopted using slider widgets. On any changing parameter, the suitability map is updated and rendered in the viewer. Using a time slider, environmental parameters for several future climate scenarios can be accessed and converted in suitability maps.
-This work is available on this [GitHub page](https://github.com/willem0boone/Edito_model_viewer). 
+This work is available on on [GitHub - Edito_model_viewer](https://github.com/willem0boone/Edito_model_viewer). 
 
 #### Data formatting
 The environmental variable dataset used by the smartviewer, need to be provided in a specific format. To create this dataset, different sources and storage from Edito data lake are used. Two pipelines were required: 
 - Downscaling large .zarr datasets to lower resolution. E.g. the bathymetry dataset is around 20GB, which is to large for the demonstrator purpose.
 - Creating pyramids in which each level has increasing resolution (for optimal zooming/rendering).
 
-This work is available on this [GitHub page](https://github.com/willem0boone/Edito_resampling_datasets)
+This work is available on this [GitHub - Edito_resampling_datasts](https://github.com/willem0boone/Edito_resampling_datasets)
 
 ## Building the site
 
@@ -41,7 +41,9 @@ To start a development version of the site, simply run:
 npm run dev
 ```
 
-and then visit `http://localhost:5002/model_viewer/habitat_suitability` in your browser.
+Visit application in a browser:
+>`http://localhost:5002/model_viewer/habitat_suitability` 
+
 
 ## Simulating Habitat Suitability
 
@@ -68,23 +70,26 @@ Each environmental variable has 5 settings (sliders in the app) that can be adju
 
 ### Habitat suitability
 
-Habitat suitability is calculated as the weighted average of suitability per environmental variable. Each environmental variable (i) has:
+Habitat suitability is calculated as the weighted average of suitability per environmental variable. Each environmental variable has:
 - A **weight** (Wi) representing its importance.
 - A **suitability score** (Si) indicating how suitable that variable is.
 
+Index \( i \) represent each environmental variable in the habitat suitability model.
+<!--
+In case the Latex is not rendering fine, this is a description of the formula
 To calculate the habitat suitability:
 - Multiply each environmental variable's weight by its corresponding suitability score. (Wi * Si)
 - Add these values together to get the **numerator**. (SUM(Wi * Si))
 - Sum up all the weights to get the **denominator**. (SUM(Wi))
 - Divide the numerator by the denominator to calculate the habitat suitability. (SUM(Wi * Si) / SUM(Wi))
 
-#### Formula (LaTeX)
-> Notice: GitHub does not support LaTeX. Open the markdown in an .md reader or IDE for proper rendering. <br>
+> Notice: GitHub might not support LaTeX. Open the markdown in an .md reader or IDE for proper rendering. <br>
+-->
 
-Index \( i \) represent each environmental variable in the habitat suitability model.
 
 ```math
 \text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
+
 \\
 
 \text{with:}
@@ -100,7 +105,7 @@ n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
-<<some reference to Rutendo/Ward: source of presets>>
+>TO DO: add some reference to preset values (paper in review)
 
 
 ### Simulating the future
