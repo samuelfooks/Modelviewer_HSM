@@ -1,7 +1,7 @@
 {
-  "name": "seaweed-farming-web",
+  "name": "Edito_model_viewer",
   "version": "1.0.0",
-  "description": "Mapping seaweed farming potential",
+  "description": "Modelviewer habitat suitability model; created in EDITO-INFRA project T7.3, based on carbonplan maps.",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 5002",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carbonplan/seaweed-farming-web.git"
+    "url": "git+https://github.com/willem0boone/Edito_model_viewer"
   },
-  "author": "carbonplan",
+  "author": "VLIZ",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carbonplan/seaweed-farming-web/issues"
+    "url": "https://github.com/willem0boone/Edito_model_viewer/issues"
   },
   "prettier": "@carbonplan/prettier",
-  "homepage": "https://github.com/carbonplan/seaweed-farming-web#readme",
+  "homepage": "https://github.com/willem0boone/Edito_model_viewer#README.md",
   "dependencies": {
     "@carbonplan/colormaps": "^3.0.2",
     "@carbonplan/components": "^11.8.1",

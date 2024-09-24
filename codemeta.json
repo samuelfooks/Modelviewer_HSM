@@ -1,0 +1,213 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "{id of the GitHub repo (can be DOI)}",
+  "description": "Modelviewer habitat suitability model; created in EDITO-INFRA project T7.3, based on carbonplan maps.",
+  "name": "Edito_model_viewer",
+  "codeRepository": "https://github.com/willem0boone/Edito_model_viewer",
+  "issueTracker": "https://github.com/willem0boone/Edito_model_viewer/issues",
+  "license": "MIT License",
+  "version": "1.0.0",
+  "datePublished": "2024-09-23",
+  "dateModified": "",
+  "programmingLanguage": [
+    {
+    "@type": "ComputerLanguage",
+    "name": "JavaScript",
+    "url": "https://www.javascript.com/"
+    }
+   ],
+  "operatingSystem": "Windows 11",
+  "runtimePlatform": ["Node.js v20.15.0."],
+  "provider": {
+    "@id": "https://ror.org/0496vr396",
+    "@type": "Organization",
+    "name": "Flanders Marine Institute",
+    "url": "https://vliz.be/en"
+  },
+  "contributor": [
+      {
+      "@type": "Person",
+      "givenName": "Willem",
+      "familyName": "Boone",
+      "email": "willem.boone@vliz.be",
+      "@id": "https://orcid.org/0009-0008-0916-6847",
+      "orcid": "https://orcid.org/0009-0008-0916-6847"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@type": "Person",
+      "givenName": "Willem",
+      "familyName": "Boone",
+      "email": "willem.boone@vliz.be",
+      "@id": "https://orcid.org/0009-0008-0916-6847",
+      "orcid": "https://orcid.org/0009-0008-0916-6847"
+    }
+  ],
+  "funder": [
+    {
+      "@type": "Organization",
+      "@id": "https://ror.org/019w4f821",
+      "name": "European Union Horizon Europe research and innovation programme under Grant Agreement no 101101473"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Willem",
+      "familyName": "Boone",
+      "email": "willem.boone@vliz.be",
+      "@id": "https://orcid.org/0009-0008-0916-6847",
+      "orcid": "https://orcid.org/0009-0008-0916-6847"
+    }
+  ],
+ "softwareRequirements": {
+     "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/colormaps",
+      "name": "@carbonplan/colormaps",
+      "version": "^3.0.2"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/components",
+      "name": "@carbonplan/components",
+      "version": "^11.8.1"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/icons",
+      "name": "@carbonplan/icons",
+      "version": "^1.1.1"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/layouts",
+      "name": "@carbonplan/layouts",
+      "version": "^1.5.0"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/maps",
+      "name": "@carbonplan/maps",
+      "version": "^2.0.1"
+    },
+    "6": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@carbonplan/theme",
+      "name": "@carbonplan/theme",
+      "version": "^7.0.0"
+    },
+    "7": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@emotion/react",
+      "name": "@emotion/react",
+      "version": "^11.7.1"
+    },
+    "8": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@emotion/styled",
+      "name": "@emotion/styled",
+      "version": "^11.6.0"
+    },
+    "9": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@mdx-js/react",
+      "name": "@mdx-js/react",
+      "version": "^1.6.22"
+    },
+    "10": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@next/mdx",
+      "name": "@next/mdx",
+      "version": "^12.0.7"
+    },
+    "11": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@theme-ui/color",
+      "name": "@theme-ui/color",
+      "version": "^0.13.1"
+    },
+    "12": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@theme-ui/core",
+      "name": "@theme-ui/core",
+      "version": "^0.13.1"
+    },
+    "13": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@theme-ui/css",
+      "name": "@theme-ui/css",
+      "version": "^0.13.1"
+    },
+    "14": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/@theme-ui/match-media",
+      "name": "@theme-ui/match-media",
+      "version": "^0.13.1"
+    },
+    "15": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/d3-array",
+      "name": "d3-array",
+      "version": "^2.12.1"
+    },
+    "16": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/d3-format",
+      "name": "d3-format",
+      "version": "^2.0.0"
+    },
+    "17": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/ndarray",
+      "name": "ndarray",
+      "version": "^1.0.19"
+    },
+    "18": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/next",
+      "name": "next",
+      "version": "^12.0.7"
+    },
+    "19": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/polished",
+      "name": "polished",
+      "version": "^4.1.3"
+    },
+    "20": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/react",
+      "name": "react",
+      "version": "^17.0.2"
+    },
+    "21": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/react-animate-height",
+      "name": "react-animate-height",
+      "version": "^2.0.23"
+    },
+    "22": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/react-dom",
+      "name": "react-dom",
+      "version": "^17.0.2"
+    },
+    "23": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/theme-ui",
+      "name": "theme-ui",
+      "version": "^0.13.1"
+    },
+    "24": {
+      "@type": "SoftwareApplication",
+      "identifier": "https://www.npmjs.com/package/trim",
+      "name": "trim",
+      "version": ">=0.0.3"
+    }
+  },
+  "keywords": ["modelviewer", "habitat suitability", "EDITO-INFRA"],
+  "readme": "https://github.com/willem0boone/Edito_model_viewer#README.md"
+}

@@ -8,7 +8,7 @@ Author: Willem Boone | contact: [willem.boone@vliz.be](willem.boone@vliz.be)
 
 ## Goal
 #### Summary of Demonstrator
-The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub](https://github.com/carbonplan/seaweed-farming-web).
+The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub - seaweed-farming-web](https://github.com/carbonplan/seaweed-farming-web).
 
 In this demonstrator, habitat suitability is calculated using a deterministic model that uses minimum and maximum thresholds on the environmental variables.
  The environmental parameters that are used are: 
@@ -18,14 +18,14 @@ In this demonstrator, habitat suitability is calculated using a deterministic mo
 - Bathymetry
 
 The thresholds for all variables can be adopted using slider widgets. On any changing parameter, the suitability map is updated and rendered in the viewer. Using a time slider, environmental parameters for several future climate scenarios can be accessed and converted in suitability maps.
-This work is available on this [GitHub page](https://github.com/willem0boone/Edito_model_viewer). 
+This work is available on on [GitHub - Edito_model_viewer](https://github.com/willem0boone/Edito_model_viewer). 
 
 #### Data formatting
 The environmental variable dataset used by the smartviewer, need to be provided in a specific format. To create this dataset, different sources and storage from Edito data lake are used. Two pipelines were required: 
 - Downscaling large .zarr datasets to lower resolution. E.g. the bathymetry dataset is around 20GB, which is to large for the demonstrator purpose.
 - Creating pyramids in which each level has increasing resolution (for optimal zooming/rendering).
 
-This work is available on this [GitHub page](https://github.com/willem0boone/Edito_resampling_datasets)
+This work is available on this [GitHub - Edito_resampling_datasts](https://github.com/willem0boone/Edito_resampling_datasets)
 
 ## Building the site
 
@@ -41,15 +41,24 @@ To start a development version of the site, simply run:
 npm run dev
 ```
 
-and then visit `http://localhost:5002/model_viewer/habitat_suitability` in your browser.
+Visit application in a browser:
+>`http://localhost:5002/model_viewer/habitat_suitability` 
+
 
 ## Simulating Habitat Suitability
 
-### Environmental living conditions
-Each environmental variable has 5 settings (sliders) that can be adjusted to user requirements / species characteristics. Four of them are related to the living preferences and limitations of the species and are described in this table:  
+### Single suitability score
+#### Parameters
+Each environmental variable has 5 settings (sliders in the app) that can be adjusted to user choices / species characteristics.
+- **Critical minimum**: Below this threshold the species cannot survive.
+- **Optimal minimum**: Optimal living conditions above this threshold.
+- **Optimal maximum** Optimal living conditions below this threshold.
+- **Critiall maximum**: Above this threshold the species cannot survive.
+- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
 
+#### Score
 
-| Environmental value				| Situation 					| habitat suitability 		|
+| Environmental variable				| Situation 					| Suitability score 		|
 |-------					|-----						|------------			|
 |                     .  < critical minimum  	| The species cannot survive 			| 0	   			|
 | critical minimum <  .  < optimal minimum   	| Not optimal but the species can survive  	| value between 0-1 (linear) 	|
@@ -57,15 +66,30 @@ Each environmental variable has 5 settings (sliders) that can be adjusted to use
 | optimal maximum  <  .  < critical maximum	| Not optimal but the species can survive  	| value between 1-0 (linear)   	|
 | critical maximum <  . 			| The species cannot survive 			| 0     			|
 
-The fifth slider serves to adjust the importance of this variable in the simulation.
+- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
 
 ### Habitat suitability
 
-<!-- 
+Habitat suitability is calculated as the weighted average of suitability per environmental variable. Each environmental variable has:
+- A **weight** (Wi) representing its importance.
+- A **suitability score** (Si) indicating how suitable that variable is.
+
 Index \( i \) represent each environmental variable in the habitat suitability model.
+<!--
+In case the Latex is not rendering fine, this is a description of the formula
+To calculate the habitat suitability:
+- Multiply each environmental variable's weight by its corresponding suitability score. (Wi * Si)
+- Add these values together to get the **numerator**. (SUM(Wi * Si))
+- Sum up all the weights to get the **denominator**. (SUM(Wi))
+- Divide the numerator by the denominator to calculate the habitat suitability. (SUM(Wi * Si) / SUM(Wi))
+
+> Notice: GitHub might not support LaTeX. Open the markdown in an .md reader or IDE for proper rendering. <br>
+-->
+
 
 ```math
 \text{Habitat suitability} = \frac{\sum_{i=1}^{n} \left( W_i \cdot S_i \right)}{\sum_{i=1}^{n} W_i}
+
 \\
 
 \text{with:}
@@ -76,29 +100,12 @@ S_i & \text{ is the suitability score for environmental variable } i,\\
 n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 \end{align*}
 ```
- -->
- 
- Habitat suitability is calculated as the weighted average of suitability per environmental variables. Each environmental variable has:
-- The **weight** (W) representing its importance.
-- A **suitability score** (S) indicating how suitable that variable is.
-
-#### Formula
-Habitat suitability is the total sum of the products of weights and suitability scores for all environmental variables, divided by the total sum of the weights.
-- Multiply each environmental variable's weight by its corresponding suitability score.
-- Add these values together to get the **numerator**.
-- Then, sum up all the weights to get the **denominator**.
-- Finally, divide the numerator by the denominator to calculate the habitat suitability.
-
-#### Variables
-- **W** = Weight of each environmental variable (how important it is).
-- **S** = Suitability score of each environmental variable (how suitable it is).
-- **n** = The number of environmental variables considered.
 
 ### Presets
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
-<<some reference to Rutendo/Ward: source of presets>>
+>TO DO: add some reference to preset values (paper in review)
 
 
 ### Simulating the future
@@ -112,4 +119,4 @@ For future predictions, 3 Shared Socioeconomic Pathways can be selected. Using t
 | SSP585   								| Very high GHG emissions: CO2 emissions triple by 2075.    									|
 
 ## Credits
-This work is based on Carbonplan their seaweed-farming-web: [app](https://carbonplan.org/research/seaweed-farming) | [GitHub](https://github.com/carbonplan/seaweed-farming-web). 
+The application makes use of technology developed by Carbonplan: [App](https://carbonplan.org/research/seaweed-farming) | [GitHub](https://github.com/carbonplan/seaweed-farming-web). 
