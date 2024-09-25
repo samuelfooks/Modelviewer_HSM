@@ -105,7 +105,7 @@ n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
->TO DO: add some reference to preset values (paper in review)
+>TO DO: add reference for preset values (paper in review)
 
 
 ### Simulating the future
