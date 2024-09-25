@@ -71,9 +71,6 @@ Visual this looks likes this:
 
 ![Habitat suitability graph](https://drive.google.com/uc?export=view&id=1rr4lZyAxBrkXPt7mYiOkqAJL7V__EkCp)
 
-![Habitat suitability graph](https://drive.google.com/file/d/1rr4lZyAxBrkXPt7mYiOkqAJL7V__EkCp/view?usp=sharing)
-
-
 ### Habitat suitability
 
 Habitat suitability is calculated as the weighted average of suitability per environmental variable. Each environmental variable has:
