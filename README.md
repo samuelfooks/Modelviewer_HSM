@@ -55,7 +55,7 @@ Each environmental variable has 5 settings (sliders in the app) that can be adju
 - **Optimal minimum**: Optimal living conditions above this threshold.
 - **Optimal maximum** Optimal living conditions below this threshold.
 - **Critiall maximum**: Above this threshold the species cannot survive.
-- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
+- **Weight**: the fifth parameter indicatest the importance of the variable in the total score (~the weight).
 
 #### Score
 
@@ -67,7 +67,12 @@ Each environmental variable has 5 settings (sliders in the app) that can be adju
 | optimal maximum  <  .  < critical maximum	| Not optimal but the species can survive  	| value between 1-0 (linear)   	|
 | critical maximum <  . 			| The species cannot survive 			| 0     			|
 
-- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
+Visual this looks likes this: 
+
+![Habitat suitability graph](https://drive.google.com/uc?export=view&id=1rr4lZyAxBrkXPt7mYiOkqAJL7V__EkCp)
+
+![Habitat suitability graph](https://drive.google.com/file/d/1rr4lZyAxBrkXPt7mYiOkqAJL7V__EkCp/view?usp=sharing)
+
 
 ### Habitat suitability
 
