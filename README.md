@@ -47,6 +47,7 @@ Visit application in a browser:
 
 
 ## Simulating Habitat Suitability
+The habitat suitability model that is deployed in this viewer is based on the work from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905). The paper is in review and will be added later.
 
 ### Single suitability score
 #### Parameters
@@ -108,7 +109,7 @@ n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
->TO DO: add reference for preset values (paper in review)
+>TO DO: add reference for preset values (paper from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905) in review).
 
 
 ### Simulating the future
