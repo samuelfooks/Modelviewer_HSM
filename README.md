@@ -47,6 +47,7 @@ Visit application in a browser:
 
 
 ## Simulating Habitat Suitability
+The habitat suitability model that is deployed in this viewer is based on the work from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905). The paper is in review and will be added later.
 
 ### Single suitability score
 #### Parameters
@@ -55,7 +56,7 @@ Each environmental variable has 5 settings (sliders in the app) that can be adju
 - **Optimal minimum**: Optimal living conditions above this threshold.
 - **Optimal maximum** Optimal living conditions below this threshold.
 - **Critiall maximum**: Above this threshold the species cannot survive.
-- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
+- **Weight**: the fifth parameter indicatest the importance of the variable in the total score (~the weight).
 
 #### Score
 
@@ -67,7 +68,9 @@ Each environmental variable has 5 settings (sliders in the app) that can be adju
 | optimal maximum  <  .  < critical maximum	| Not optimal but the species can survive  	| value between 1-0 (linear)   	|
 | critical maximum <  . 			| The species cannot survive 			| 0     			|
 
-- **Weight**: the fifth paramter indicatest the importance of the variable in the total score (~the weight).
+Visual this looks likes this: 
+
+![Habitat suitability graph](https://drive.google.com/uc?export=view&id=1rr4lZyAxBrkXPt7mYiOkqAJL7V__EkCp)
 
 ### Habitat suitability
 
@@ -106,7 +109,7 @@ n & \text{ is the number of } i \text{ environmental variables ranging: }[1:n].
 The simulation is preconfigured for 3 species which can be selected using checkboxes.
 
 
->TO DO: add reference for preset values (paper in review)
+>TO DO: add reference for preset values (paper from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905) in review).
 
 
 ### Simulating the future
