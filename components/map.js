@@ -121,7 +121,8 @@ const Viewer = ({ expanded, children }) => {
           fillValue={NAN}
           source={
             //'https://minio.lab.dive.edito.eu/oidc-willemboone/prototype_reduced.zarr'
-            'https://minio.lab.dive.edito.eu/oidc-willemboone/EDITO_DUC/EDITO_DUC_pyramid.zarr'
+            //'https://minio.lab.dive.edito.eu/oidc-willemboone/EDITO_DUC/EDITO_DUC_pyramid.zarr'
+            'https://minio.dive.edito.eu/oidc-willemboone/EDITO_DUC/EDITO_DUC_pyramid.zarr'
           }
           frag={frag}
         />
