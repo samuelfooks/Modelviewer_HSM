@@ -7,6 +7,8 @@ This project is part of EDITO-INFRA ([Grant agreement ID: 101101473](https://doi
 
 Author: Willem Boone | contact: [willem.boone@vliz.be](willem.boone@vliz.be)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VDw9d9u2Kzw?si=J6B-qUZCHXFpsPhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Goal
 #### Summary of Demonstrator
 The demonstrator use case (DUC) consists of a smartviewer that hosts a model to predict habitat suitability based on environmental living conditions. The smartviewer is based on Carbonplan its [seaweed-farming-web](https://carbonplan.org/research/seaweed-farming)/[GitHub - seaweed-farming-web](https://github.com/carbonplan/seaweed-farming-web).
