@@ -7,7 +7,9 @@ This project is part of EDITO-INFRA ([Grant agreement ID: 101101473](https://doi
 
 Author: Willem Boone | contact: [willem.boone@vliz.be](willem.boone@vliz.be)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VDw9d9u2Kzw?si=J6B-qUZCHXFpsPhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Demo video
+[![Watch the video](https://img.youtube.com/vi/VDw9d9u2Kzw/0.jpg)](https://www.youtube.com/watch?v=VDw9d9u2Kzw)
+
 
 ## Goal
 #### Summary of Demonstrator
