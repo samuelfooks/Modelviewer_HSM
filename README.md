@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/851482302.svg)](https://zenodo.org/doi/10.5281/zenodo.13838371)
-# Edito Resampling datasets
+# Habitat Suitability Model Viewer
 
 ## About
 This project is part of EDITO-INFRA ([Grant agreement ID: 101101473](https://doi.org/10.3030/101101473)):
