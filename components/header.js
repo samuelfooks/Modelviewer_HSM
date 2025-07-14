@@ -9,7 +9,7 @@ import {
   Settings,
 } from '@carbonplan/components'
 
-const Header = ({ expanded, setExpanded, embedded }) => {
+const Header = ({ expanded, setExpanded }) => {
   return (
     <>
       <Head>
@@ -28,56 +28,25 @@ const Header = ({ expanded, setExpanded, embedded }) => {
           zIndex: 5000,
         }}
       >
-        {embedded ? (
-          <>
-            //<Logo sx={{ float: 'left', m: [3] }} />
-            <Settings
-              sx={{ float: 'right', m: [3], pointerEvents: 'all' }}
-              onClick={() => setExpanded((prev) => !prev)}
-              value={expanded}
-            />
-          </>
-        ) : (
-          <Box
-            as='header'
-            sx={{
-              width: '100%',
-              borderWidth: 0,
-              borderStyle: ['solid', 'solid', 'none', 'none'],
-              borderColor: ['muted', 'muted', 'unset', 'unset'],
-              borderBottomWidth: ['1px', '1px', 'unset', 'unset'],
-              bg: ['background', 'background', 'unset', 'unset'],
-              position: 'sticky',
-              top: 0,
-              height: '56px',
-              zIndex: 2000,
-            }}
-          >
-            <Container>
-    {/*           <HeaderComponent
-                menuItems={[
-                  <Dimmer
-                    key='dimmer'
-                    sx={{
-                      color: 'primary',
-                      mt: '-2px',
-                      display: ['block', 'block', 'none', 'none'],
-                    }}
-                  />,
-                  <Settings
-                    key='settings'
-                    sx={{
-                      mr: ['2px'],
-                      display: ['inherit', 'inherit', 'none', 'none'],
-                    }}
-                    value={expanded}
-                    onClick={() => setExpanded((prev) => !prev)}
-                  />,
-                ]}
-              /> */}
-            </Container>
-          </Box>
-        )}
+        <Box
+          as='header'
+          sx={{
+            width: '100%',
+            borderWidth: 0,
+            borderStyle: ['solid', 'solid', 'none', 'none'],
+            borderColor: ['muted', 'muted', 'unset', 'unset'],
+            borderBottomWidth: ['1px', '1px', 'unset', 'unset'],
+            bg: ['background', 'background', 'unset', 'unset'],
+            position: 'sticky',
+            top: 0,
+            height: '56px',
+            zIndex: 2000,
+          }}
+        >
+          <Container>
+            {/* Optionally add HeaderComponent or Settings here if needed */}
+          </Container>
+        </Box>
       </Box>
     </>
   )

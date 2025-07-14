@@ -33,51 +33,12 @@ const useScrollbarClasses = () => {
   return customScrollbar ? 'custom-scrollbar' : null
 }
 
-const ControlPanel = ({ expanded, setExpanded, children, embedded }) => {
+const ControlPanel = ({ expanded, setExpanded, children }) => {
   const { setShowRegionPicker } = useRegionContext()
   const className = useScrollbarClasses()
   const index = useBreakpointIndex({ defaultIndex: 2 })
 
-  if (embedded) {
-    return (
-      <Box
-        sx={{
-          opacity: expanded ? 1 : 0,
-          pointerEvents: expanded ? 'all' : 'none',
-          position: 'fixed',
-          top: '0px',
-          right: '0px',
-          bottom: '0px',
-          minWidth: '0px',
-          maxHeight: '100vh',
-          width: '100vw',
-          overflowX: 'hidden',
-          overflowY: 'scroll',
-          backgroundColor: 'background',
-          zIndex: 4000,
-          pt: ['56px'],
-          transition: 'opacity 0.25s',
-        }}
-      >
-        <Container>
-          <Row>
-            <Column start={[1]} width={[12]}>
-              <Divider />
-
-              <Box
-                sx={{
-                  display: expanded ? 'inherit' : 'none',
-                  mt: [4],
-                }}
-              >
-                {expanded && children}
-              </Box>
-            </Column>
-          </Row>
-        </Container>
-      </Box>
-    )
-  } else if (index < 2) {
+  if (index < 2) {
     return (
       <Box
         className={className}
@@ -120,7 +81,6 @@ const ControlPanel = ({ expanded, setExpanded, children, embedded }) => {
         side='left'
         width={3}
         onClose={() => setShowRegionPicker(false)}
-
       >
         {children}
       </Sidebar>
