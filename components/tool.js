@@ -66,10 +66,10 @@ const Tool = ({ embedded = false }) => {
               <Group spacing={4}>
                 <Box sx={sx.description}>
                 This is an interactive tool for exploring habitat suitability based on 
-                suitability of environmental paramters.
+                suitability of environmental parameters.
                 Read the{' '}
                 <Link
-                  href='https://github.com/willem0boone/Edito_model_viewer'
+                  href='https://doi.org/10.3389/fmars.2025.1501751'
 
                 >
                 paper
@@ -80,7 +80,7 @@ const Tool = ({ embedded = false }) => {
                   href='https://github.com/willem0boone/Edito_model_viewer'
    
                 >
-                explaining article.
+                github page.
                 </Link>
                 </Box>
 

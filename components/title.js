@@ -62,7 +62,7 @@ const Title = ({ expanded, setExpanded }) => {
           >
             Demonstrator of Edito-infra project. Read the{' '}
             <Link
-              href='https://github.com/willem0boone/Edito_model_viewer'
+              href='https://doi.org/10.3389/fmars.2025.1501751'
               sx={{ pointerEvents: expanded ? 'none' : 'all' }}
             >
             paper
@@ -73,7 +73,7 @@ const Title = ({ expanded, setExpanded }) => {
               href='https://github.com/willem0boone/Edito_model_viewer'
               sx={{ pointerEvents: expanded ? 'none' : 'all' }}
             >
-            explaining article.
+           Github page.
   
             </Link>
             This application makes use of technology developed by {' '}

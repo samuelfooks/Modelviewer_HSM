@@ -15,12 +15,16 @@ const About = ({ sx }) => {
       <Box sx={sx.heading}>Credits</Box>
       <Group spacing={2}>
         <Box sx={sx.description}>
+        Development - Willem Boone <br></br>
+        Deployment - Samuel Fooks <br></br>
+        Model - Rutendo Musimwa <br></br><br></br>
        
         The application makes use of technology developed by {' '}
         <Link
           href=' https://github.com/carbonplan/seaweed-farming-web'
         >
-        Carbonplan.
+        Carbonplan. 
+        
         </Link>        
         </Box>
       </Group>
