@@ -7,3 +7,7 @@ model/dst/
 model/node_modules/
 *.zarr
 .zarr
+.venv/
+*.pyc
+*.pyo
+_next/
