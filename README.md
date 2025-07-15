@@ -51,7 +51,7 @@ Visit application in a browser:
 
 
 ## Simulating Habitat Suitability
-The habitat suitability model that is deployed in this viewer is based on the work from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905). The paper is in review and will be added later.
+The habitat suitability model that is deployed in this viewer is based on the [work](https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2025.1501751/full) from [Rutendo Musimwa](https://orcid.org/0009-0004-2354-4905). 
 
 ### Single suitability score
 #### Parameters
