@@ -14,7 +14,9 @@ fi
 npm ci
 npm run build
 npm run export
-mv out/model_viewer/habitat_suitability/embed.html out/model_viewer/habitat_suitability/index.html
+mv out/model_viewer/habitat_suitability/embed.html out/index.html
+mv out/model_viewer/habitat_suitability.html out/
+rm -rf out/model_viewer
+
 echo "Build completed successfully."
-# 'next build' + static export via config
 popd >/dev/null
